@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBZ Character</title>
+  </head>
+  <body>
+    <h1>DBZ Character</h1>
+    <hr />
+    <div class="row">
+      <div class="col">
+        <app-dbz-list
+          [charactersList]="characters"
+          (onDelete)="onDeleteCharacterById($event)"
+        ></app-dbz-list>
+      </div>
+      <div class="col">
+        <app-add-character (onAdd)="onAddCharacter($event)"></app-add-character>
+      </div>
+    </div>
+  </body>
+</html>
